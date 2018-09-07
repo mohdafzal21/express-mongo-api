@@ -1,7 +1,30 @@
 <% include ./partials/header.ejs %>
 
 
-this is api which i will create
+
+
+
+
+<form action="/" method="POST">
+<label>name</label><input type="text" name="name" >
+<label>address</label><input type="text" name="address" >
+<label>phone</label><input type="text" name="phone" >
+<label>image</label><input type="text" name="img" >
+<button type="submit" >submit</button>
+</form>
+
+
+
+
+
+<div class="content"></div>
+
+
+<script>
+  $('form').hide();
+</script>
+
+<script src="/public/javascripts/hotels.js"></script>
 
 <% include ./partials/footer.ejs %>
 

@@ -4,13 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 var logger = require('morgan');
-
+var methodOverride = require('method-override')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var sellerRouter = require('./routes/sellers');
 var app = express();
 
-
+app.use(methodOverride('X-HTTP-Method-Override'))
 //body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));

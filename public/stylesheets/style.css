@@ -69,6 +69,12 @@ span.navbar-toggler-icon{
   
 }
 
+
+.item{
+  border : 5px solid black
+}
+
+
 .content .item .header {
   display: flex;
   border: 2px solid #dadada;
