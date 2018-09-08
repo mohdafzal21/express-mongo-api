@@ -7,6 +7,9 @@ router.get('/index',(req,res)=>{
   res.render('index');
 });
 
+router.get('/update',(req,res)=>{
+  res.render('update');
+})
 
 /* GET home page. */
 router.get('/', (req,res)=> {

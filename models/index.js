@@ -8,6 +8,9 @@ mongoose.connect('mongodb://localhost/hotelsapi',(err)=>{
     }
 });
 
+
+
+
 mongoose.Promise = Promise;
 
 module.exports.Hotels = require('./hotels');

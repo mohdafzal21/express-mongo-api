@@ -19,7 +19,7 @@ hotels.init = function(){
 
 hotels.addR = function(){
     $('.addR').on("click",function(){
-        $('form').show();
+        $('#addr').show();
         
         
     })
@@ -27,16 +27,42 @@ hotels.addR = function(){
 
  hotels.del = function(){
      $('.del').on("click",function(){
-         console.log(req.body);;
-         
+         console.log(id._id);
+         url = "/" + id._id
+        //  console.log(url);
+         $.post({
+             url: url,
+             method: "DELETE"
+         })
+          window.location = '/index'
      })
  }
 
  hotels.upd = function(){
-    $('.upd').on("click",function(){
-        console.log("clicked");
-    })
+    $('.upd').on("click",function(e){
+           e.preventDefault();
+           $('#addr2').show();
+           $('#addr2').on("click", function(e){
+            e.preventDefault();
+           
+            $.post({
+         url : "/" + id._id,
+         type: "PUT",
+         data : {
+             name : $('#id1').val(),
+             address: $('#id2').val(),
+             phone : $('#id3').val(),
+             img : $('#id4').val() 
+         },
+         });
+       })
+      
+      })
+
 }
+
+
+
 
 
 hotels.generateMarkup = function(){

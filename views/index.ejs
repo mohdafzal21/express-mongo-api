@@ -5,7 +5,8 @@
 
 
 
-<form action="/" method="POST">
+<form id="addr" action="/" method="POST">
+  <label for="adding hotels">Add restaurants</label>
 <label>name</label><input type="text" name="name" >
 <label>address</label><input type="text" name="address" >
 <label>phone</label><input type="text" name="phone" >
@@ -13,7 +14,17 @@
 <button type="submit" >submit</button>
 </form>
 
-
+<form id="addr2"  method="POST">
+  <label>update Form</label><br>
+    <label>name</label><input type="text" name="name" id ="id1">
+    <label>address</label><input type="text" name="address" id ="id2" >
+    <label>phone</label><input type="text" name="phone" id ="id3" >
+    <label>image</label><input type="text" name="img" id ="id4" >
+    <button type="submit" >submit</button>
+    </form>
+  
+  
+  
 
 
 
@@ -21,7 +32,9 @@
 
 
 <script>
-  $('form').hide();
+  $('#addr').hide();
+  $('#addr2').hide();
+
 </script>
 
 <script src="/public/javascripts/hotels.js"></script>
